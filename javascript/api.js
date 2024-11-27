@@ -1,7 +1,7 @@
 
 
 
-const  getKey = (async()=>{
+export const  getKey = (async()=>{
     const url = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys";
     const options  ={
         method : "POST"
@@ -19,10 +19,9 @@ const  getKey = (async()=>{
 })
 
 
-getKey()
 
 
-const getPlanets = (async()=>{
+ export const getPlanets = (async()=>{
 
     const key = await getKey()
 
@@ -45,4 +44,3 @@ const getPlanets = (async()=>{
 })
 
 
-getPlanets()
