@@ -1,0 +1,154 @@
+@font-face {
+    font-family: lora ;
+    src: url(/fonts/Lora-VariableFont_wght.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    border: solid;
+    background: linear-gradient(100deg, #0C164D,#190B22);
+    display: flex;
+    justify-content: center;
+
+ 
+}
+
+.wrapper{
+    border: solid;
+    height: 100vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    
+
+}
+.titels{
+    grid-column: 10 /17;
+    align-self: center;
+    color: aliceblue;
+}
+
+.titel{
+    font-size: 3rem;
+    grid-column: 11 /16;
+    grid-row: 2 /3;
+    color: white;
+}
+.under-titel{
+    color: gold;
+    grid-column: 14/16;
+    grid-row: 3/4;
+    font-size: 1rem;
+    font-family:lora;
+    letter-spacing: 0.8rem;
+}
+
+.planet{
+    border-radius: 99rem;
+}
+
+.half-sun{
+    align-self: center;
+    width: 7rem;
+    position: absolute;
+    overflow: hidden;
+        transform: rotate(180deg);
+
+}
+
+.sun{
+    
+    height: 40rem;
+    width: 40rem;
+    background-color: #FFD029;
+}
+
+.mercury{
+    grid-column:3/ 4;
+    grid-row: 8 / 10;
+    height: 1rem;
+    width: 1rem;
+    background-color: #888888;
+    align-self: center;
+    justify-self:end
+
+}
+
+
+.venus{
+    grid-column: 4/ 6;
+    grid-row: 8 / 10;
+    height: 2rem;
+    width: 2rem;
+    background-color: #E7CDCD;
+    align-self: center;
+    justify-self: center;
+}
+
+.tellus{
+    grid-column: 5/ 7;
+    grid-row: 8 / 10;
+    height: 2rem;
+    width: 2rem;
+    background-color: #428ED4;
+    align-self: center;
+    justify-self: center;
+}
+
+.mars{
+    grid-column: 6/ 8;
+    grid-row: 8 / 10;
+    height: 1rem;
+    width: 1rem;
+    background-color: #EF5F5F;
+    align-self: center;
+    justify-self: center;
+}
+
+.jupiter{
+    grid-column: 8/ 10;
+    grid-row: 8 / 10;
+    height: 9rem;
+    width: 9rem;
+    background-color: #E29468;
+    align-self: center;
+    justify-self: center;
+}
+
+.saturn{
+    grid-column: 10/ 13;
+    grid-row: 8 / 10;
+    height: 6rem;
+    width: 6rem;
+    background-color: #C7AA72;
+    align-self: center;
+    justify-self: center;
+}
+
+.uranus{
+    grid-column: 12/ 15;
+    grid-row: 8 / 10;
+    height: 4rem;
+    width: 4rem;
+    background-color: #C9D4F1;
+    align-self: center;
+    justify-self: center;
+}
+
+.neptune{
+    grid-column: 14/ 16;
+    grid-row: 8 / 10;
+    height: 4rem;
+    width: 4rem;
+    background-color: #7A91A7;
+    align-self: center;
+    justify-self: center;
+}
