@@ -15,6 +15,8 @@ body{
     border: solid;
     display: flex;
     justify-content: center;
+    background-color: black
+    
 
 
  
@@ -45,7 +47,7 @@ body{
     color: white;
 }
 .under-titel{
-    color: gold;
+    color: #FFD029;
     grid-column: 14/16;
     grid-row: 3/4;
     font-size: 1rem;
@@ -103,6 +105,7 @@ body{
     background-color: #428ED4;
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
 
 .mars{
@@ -165,4 +168,13 @@ body{
     background-color: #7A91A7;
     align-self: center;
     justify-self: center;
+}
+
+.ufo{
+    height: 2rem;
+    width: 2rem;
+    grid-column: 5/6;
+    grid-row: 9/12;
+    justify-self: center;
+    align-self: end;
 }
