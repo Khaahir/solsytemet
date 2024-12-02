@@ -9,7 +9,7 @@ let uranus = document.querySelector(".uranus");
 let neptune = document.querySelector(".neptune");
 let chooseplanet = document.querySelector(".wrapper");
 
-// i denna function sätter jag ett värde i local storage som sedan kommer attanvändas i /planeter.js
+// i denna function sätter jag ett värde i local storage som sedan kommer att användas i /planeter.js
 //där den kommer att hämta local storages värde med en get istället och använda värdet för att bestämma vilken data som ska komma ut
 
 chooseplanet.addEventListener("click", (event) => {

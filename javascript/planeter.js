@@ -1,4 +1,4 @@
-import { getKey } from "./api.js";
+import { getKey } from "./api.js"; // här blir funktionen getkey importerad
 let planetcolor = document.querySelector(".side-planet");
 let planetshadow = document.querySelector(".shadow-planet");
 let titel = document.querySelector(".title");
@@ -11,7 +11,7 @@ let minTemp = document.querySelector(".min-temp");
 let moon = document.querySelector(".moons");
 
 const getPlanets = async () => {
-  const key = await getKey();
+  const key = await getKey(); // här gör jag en awit för att vänta in getkey  o lägger den i en varibel fär att spara värdet varje gång det generar en ny nyckel
   let planetID = localStorage.getItem("planet"); // här hämtas värdet till planetID som sedan används i DOM
 
   const url = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies";
