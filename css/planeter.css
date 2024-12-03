@@ -168,8 +168,8 @@ body {
 }
 
 .back-rocket {
-  grid-column: 9 / 11;
-  grid-row: 2/4;
+  grid-column: 12 / 115;
+  grid-row: 2/3;
   height: 2rem;
   width: 2rem;
   transform: rotate(180deg);
