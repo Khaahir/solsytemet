@@ -1,4 +1,4 @@
-import { getKey } from "./api.js"; // här blir funktionen getkey importerad
+import * as api from "./api.js";
 let planetcolor = document.querySelector(".side-planet");
 let planetshadow = document.querySelector(".shadow-planet");
 let titel = document.querySelector(".title");
@@ -11,7 +11,7 @@ let minTemp = document.querySelector(".min-temp");
 let moon = document.querySelector(".moons");
 
 const getPlanets = async () => {
-  const key = await getKey(); // här gör jag en awit för att vänta in getkey  o lägger den i en varibel fär att spara värdet varje gång det generar en ny nyckel
+  const key = await api.getKey(); // här gör jag en await för att vänta in getkey  o lägger den i en varibel fär att spara värdet varje gång det generar en ny nyckel
   let planetID = localStorage.getItem("planet"); // här hämtas värdet till planetID som sedan används i DOM
 
   const url = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies";
@@ -28,13 +28,13 @@ const getPlanets = async () => {
     bread.innerText = data.bodies[planetID].desc;
     planetSize.innerText = `${data.bodies[
       planetID
-    ].circumference.toLocaleString()} km`;
-    distanceToSun.innerText = `${data.bodies[
-      planetID
-    ].distance.toLocaleString()} km`;
+    ].circumference.toLocaleString("sv-SE")} km`;
+    distanceToSun.innerText = `${data.bodies[planetID].distance.toLocaleString(
+      "sv-SE"
+    )} km`;
     maxTemp.innerHTML = `${data.bodies[planetID].temp.day}&deg`;
     minTemp.innerHTML = `${data.bodies[planetID].temp.night}&deg`;
-    moon.innerText = `${data.bodies[planetID].moons}`;
+    moon.innerText = `${data.bodies[planetID].moons.join(", ")}`;
   } catch (error) {
     console.log(error);
   }
